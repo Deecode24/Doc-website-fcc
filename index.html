@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--This is one of my freecodecamp project of my version of a Technical Documentation Page (Topic: Git and Version Control)-->
+
+    <!--NAVBAR: Which will also be a sidebar-->
+    <nav id="navbar">
+        <header id="page-title">Git and Version Control</header>
+        <ul>
+            <li><a href="#intoduction-to-version-control" class="nav-link">Introduction to Version Control</a></li>
+            <li><a href="#setting-up-git" class="nav-link">Setting Up Git</a></li>
+            <li><a href="#basic-git-commands" class="nav-link">Basic Git Commands</a></li>
+            <li><a href="#branching-and-merging" class="nav-link">Branching and Merging</a></li>
+            <li><a href="#resolving-conflicts" class="nav-link">Resolving Conflicts</a></li>
+            <li><a href="#using-github" class="nav-link">Using GitHub</a></li>
+            <li><a href="#best-practices" class="nav-link">Best Practices</a></li>
+            <li><a href="#resources" class="nav-link">Resources</a></li>
+    </nav>
+        </ul>
+          
+    <!--MAIN PAGE-->
+    <main id="main-doc">
+        <section class="main-section" id="intoduction-to-version-control">
+            <header>Introduction to Version Control</header>
+                <h3>What is Version Control?</h3>
+                <p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+                <li>It allows multiple people to work on a project simultaneously, track changes, and revert to previous versions if necessary</li>
+                <h3>Introduction to Version Control</h3>
+                <p><b>Definition:</b>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+                <p><b>Benefits:</b></p><br>
+                <li>Enables collaboration: Multiple people can work on a project simultaneously</li>
+                <li>Tracks changes: Keeps a history of modifications and updates.</li>
+                <li>Reverts to previous versions: Allows restoring previous versions in case of errors.</li>
+                <h3>Types of Version Control Systems</h3>
+                <p><b> Centralized Version Control Systems (CVCS):</b></p>
+                <li>A single server stores all files and version history.</li>
+                <li>Clients check out files from this central server.</li>
+                <li>Examples: Subversion (SVN), Perforce.</li>
+                <p><b> Distributed Version Control Systems (DVCS):</b></p>
+                <li>Each client has a full copy of the repository, including its history.</li>
+                <li>Changes can be made and tracked locally.</li>
+                <li>Examples: Git, Mercurial.</li>
+        </section>
+        <section class="main-section" id="setting-up-git">
+            <header>Setting Up Git</header>
+                <h3>Introduction to Git</h3>
+                    <p>Git is a distributed version control system created by Linus Tor</p>
+                <h3>Advantages of Git:</h3>
+                    <li>Speed and performance: Efficient handling of large projects.</li>
+                    <li>Strong support for non-linear development: Branching and merging.</li>
+                    <li>Data integrity: Ensures the integrity of source code with cryptographic hashing.</li>
+                    <li>Distributed development: Each user has a complete copy of the repository.</li>
+                <h3>Installing Git</h3>
+                    <p><b>Windows:</b></p>
+                        <li>Download Git from <a href="git-scm.com" target="_blank">git-scm.com</a></li>
+                        <li>Run the installer and follow the setup instructions.</li>
+                    <p><b>macOS:</b></p>
+                        <li>Install Xcode Command Line Tools by running the command below in the terminal</li>
+                        <code>xcode-select --install</code>
+                        <li>Alternatively, download Git from git-scm.com or use a package manager like Homebrew</li>
+                        <code>brew install git</code>
+                    <p><b>Linux:</b></p>
+                        <li>Use the package manager for your distribution (sudo apt-get install git for Debian/Ubuntu, for Fedora, etc.).</li>
+                        <code>sudo dnf install git</code>
+            
+
+        </section>
+        <section class="main-section" id="basic-git-commands">
+            <header>Basic Git Commands</header>
+                <h3>Initializing a Repository</h3>
+                
+                        
+                        <code>git init</code>    
+                    
+                    <li>Description: Creates a new Git repository in your current directory.</li>
+                <h3>Cloning a Repository</h3>
+                    <code>git add <file> or git add </code>
+                <h3>Commiting changes</h3>
+                    <code>git commit -m "Your commit message"</code>
+                    <li> This records changes to the repository with a message describing the modifications.</li>
+                <h3>Pushing Changes</h3>
+                    <code>git push</code>
+                    <li>Uploads local changes to a remote repository.</li>
+                <h3>Pulling Changes</h3>
+                    <code>git pull</code>
+                    <li>Fetches and integrates changes from a remote repository to your local repository.</li>
+                <h3>Configuring Git</h3>
+                    <p><b>Setting up your identity:</b></p>
+                        <code>git config --global user.name "Your Name"</code><br>
+                        <code>git config --global --edit</code>
+                    <p><b>Setting up default text editor:</b></p>
+                    <code>git config --global core.editor "code --wait"</code> 
+                    <p><b>Basic configuration commands:</b></p>
+                        <code>git config --list</code><br>
+                        <code>git config --global --edit</code>
+        </section>
+        <section class="main-section" id="branching-and-merging">
+            <header>Branching and Merging</header>
+            <h3>Understanding Branches</h3>
+                <li><b>What is a branch?:</b>A branch is an independent line of development in a repository.</li>
+                <li><b>Why use branches?</b> Enables parallel development, feature isolation, and experimentation without affecting the main codebase.</li>
+            <h3>Basic Branch Commands</h3>
+                <li><b>Creating a branch:</b></li>
+                    <code>git branch "branch-name"</code>
+                <li><b>Switching branches:</b></li>
+                    <code>git checkout "branch-name" or git switch "branch-name"</code>
+            <h3>Merging branches:</h3>
+                <code>git merge "branch-name"</code>
+                <li> Integrates changes from the specified branch into the current branch.</li>
+
+        </section>
+        <section class="main-section" id="resolving-conflicts">
+            <header>Resolving Conflicts</header>
+            <h3>What are Merge Conflicts?</h3>
+                <li>Merge conflicts occur when changes from different branches conflict and cannot be automatically resolved by Git.</li>
+                <li>Concurrent changes to the same lines of code or file modifications.</li>
+            <h3>How to Resolve Conflicts</h3>
+                <li>Identifying conflicts: Git will mark the conflicted areas in affected files.</li>
+                <li>Manual resolution: Edit the conflicted files to resolve differences.</li>
+                <li>Marking resolution: After resolving, mark the conflicts as resolved with git add <file> and then commit the changes.</li>
+                <li>Using tools: Use merge tools like VS Code, P4Merge, or built-in Git tools to assist in resolving conflicts.</li>
+        </section>
+        <section class="main-section" id="using-github">
+            <header>Using GitHub</header>
+                <h3>Introduction to GitHub</h3>
+                    <li>What is GitHub?: A web-based platform for version control and collaboration using Git</li>
+                    <p><b>Benefits:</b></p>
+                        <li>Hosting repositories: Store and manage code online.</li>
+                        <li>Collaboration: Work with other developers on shared projects.</li>
+                        <li>Project management: Track issues, manage tasks, and use project boards.</li>
+                    <h3>Working with Repositories</h3>
+                        <p><b>Creating a repository:</b></p>
+                            <li>Through GitHub interface: Click "New" on the repositories page, fill in details, and create.</li>
+                            <li>From the command line: Create locally and then push to GitHub.</li>
+                        <p><b>Forking a repository:</b></p>
+                            <li>Fork button on a GitHub repository page.</li>
+                            <li>It reates a copy of a repository in your GitHub account.</li>
+                        <p><b>Pull requests</b></p>
+                            <li>Creating a pull request: Propose changes to a repository by opening a pull request.</li>
+                            <li>Reviewing and merging: Collaborators review the proposed changes before merging them.</li>
+                    <h3>GitHub Pages</h3>
+                        <p>GitHub Pages is a service that hosts static websites directly from a GitHub repository.</p>
+                        <p><b>Setting up a GitHub Pages Site:</b></p>
+                        <li>Create a repository named "<username>.github.io."</li>
+                        <li>Add your website files (HTML, CSS, JavaScript)</li>
+                        <li>Push changes to the repository to publish the site.</li>
+        </section>
+        <section class="main-section" id="best-practices">
+            <header>Best Practices</header>
+                <h3>Writing Good Commit Messages</h3>
+                    <p><b>Importance</b> Clear and descriptive commit messages help in understanding the history and purpose of changes.</p>
+                    <p><b>Guidelines:</b></p>
+                        <li>Use imperative mood: "Add feature" instead of "Added feature".</li>
+                        <li>Keep messages concise but informative.</li>
+                        <li>Include relevant details about what and why changes were made.</li>
+                <h3>Commit Early, Commit Often</h3>
+                    <p><b>Benefits</b></p>
+                        <li>Smaller, more manageable changes.</li>
+                        <li>Easier to track progress and isolate issues.</li>
+                        <li>Better collaboration and code review process.</li>
+                <h3>Using .gitignore</h3>
+                    <p><b>Purpose</b>Specifies intentionally untracked files to ignore.</p>
+                    <p><b>Common Patternss</b></p>
+                        <li>Ignoring build files and directories.</li>
+                        <li>Ignoring sensitive information like API keys.</li>
+                        <li>Ignoring OS-specific files and editor configurations.</li>
+                <h3>Backup and Recovery</h3>
+                    <p><b>Strategies for backing up repositories:</b></p>
+                        <li>Regularly push local changes to a remote repository.</li>
+                        <li>Use multiple remotes or backup services.</li>
+                    <p><b>Recovering from accidental deletions or errors:</b></p>
+                        <li>Use Git reflog to recover lost commits.</li>
+                        <li>Restore deleted branches or files using Git history.</li>
+
+        </section>
+        <section class="main-section" id="resources">
+            <header>Resources</header>
+                <h3>Learning Resources</h3>
+                    <p><b>Official Git Documentation</b><a href="git-scm.com/doc" target="_blank">  git-scm.com/doc</a></p>
+                    <p><b>GitHub Learning Lab:</b>Interactive tutorials and courses on GitHub features.</p>
+                    <p><b>Recommended books and tutorials:</b></p>
+                        <li>"Pro Git" by Scott Chacon and Ben Straub.</li>
+                        <li>Online courses on platforms like Freecodecamp, Udemy, Coursera, and Codecademy.</li>
+                <h3>Community and Support</h3>
+                    <p><b>Git and GitHub communities:</b></p>
+                        <li>Join communities on Reddit, Stack Overflow, and GitHub Discussions.</li>
+                    <p><b>Forums and discussion groups:</b></p>
+                        <li>Participate in discussions, ask questions, and share knowledge with other developers.</li>
+        </section>
+    </main>
+    
+</body>
+</html>
